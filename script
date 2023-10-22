@@ -1,0 +1,21 @@
+function test() {
+  const book = SpreadsheetApp.openById('1J3lyY-yxVClWkOJjiE2jHr6bi6MI-mNesYslzGz8_wE'); // ID del documento
+  const sheet = book.getSheetByName('Hoja 1'); // nombre de la hoja
+
+  let values = sheet.getRange(13, 6, 4, 24).getValues();
+  console.log(testSum(values));
+}
+
+function testSum(test) {
+  var sum = 0;
+  for (var i = 0; i < test.length; i++) {
+    for (var j = 0; j < test[i].length; j++) {
+    
+      if (typeof test[i][j] == "number") {
+        sum += test[i][j]
+      }
+    }
+  }
+  return sum
+}
+
