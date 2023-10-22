@@ -1,0 +1,21 @@
+function mainCorreo () {
+  const book = SpreadsheetApp.openById('1qXXHt-J6cHXjjpWF9SxJvFod3cGyB7ATvicZcdUDRes');
+  const sheet = book.getSheetByName('base_correos');
+  const range =  sheet.getRange('A2:D2');
+  let values = range.getValues();
+  envioCorreo(values);
+}
+
+function envioCorreo(values) {
+    const rows = values.length;
+    
+    for (let i = 0; i < rows; i++) {
+      MailApp.sendEmail({
+        to: values[i][0],
+        subject: 'Tu saldo',
+        htmlBody: `<h1>Hola ${values[i][1]}</h1>
+                   <p>Tu saldo actual de de $ ${values[i][3]}</p>`
+      });
+    }
+
+}
