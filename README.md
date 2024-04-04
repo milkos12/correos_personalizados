@@ -1,5 +1,8 @@
 # Cómo enviar correos electrónicos masivos desde Google Sheets con Apps Script
 
+[![video](http://img.youtube.com/vi/AsB1PCNuKuY/0.jpg)](http://www.youtube.com/watch?v=AsB1PCNuKuY)
+
+
 Este README proporciona información sobre cómo enviar correos electrónicos masivos desde Google Sheets con Apps Script. Este proceso es sencillo y puede automatizar la tarea de enviar correos electrónicos a una lista de destinatarios.
 
 ## Pasos
